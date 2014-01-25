@@ -1,0 +1,237 @@
+#You can comment by starting a line with a #, these are ignored by the server.
+#Commenting will NOT work unless the line STARTS with a #.
+#Sections supported are md5, partslist, resource-blacklist and resource-whitelist.
+#You cannot use both resource-blacklist AND resource-whitelist in the same file.
+#resource-blacklist bans ONLY the files you specify whereas resource-whitelist bans ALL resources except those you specify.
+#Each section has its own type of formatting. Examples have been given.
+#Sections are defined as follows
+
+!required
+
+#Here you can define GameData (mod) folders that the client requires before joining the server
+#[Folder]
+#Example: MechJeb2
+
+KAS
+
+Squad
+#NOTE: This squad entry ensures that the client hasn't deleted the default parts. Disable this if undesired.
+
+!md5
+
+#To generate the md5 of a file you can use a utility such as this one: http://onlinemd5.com/
+#For the MD5 section, file paths are read from inside GameData. If a client's MD5 does not match, they will not be permitted entry.
+#You may not specify multiple MD5s for the same file. Do not put spaces around equals sign. Follow the example carefully.
+#[File Path]=[MD5]
+#Example: MechJeb2/Plugins/MechJeb2.dll=64E6E05C88F3466C63EDACD5CF8E5919
+
+KAS/Plugins/KAS.dll=13098C76E256F84318205C070BD4415B
+
+!resource-blacklist
+
+#In this section you can specify the files to ban (or permit, if you change blacklist to whitelist).
+#You do not need to specify a path, just a resource name.
+#You can control any file from GameData here. It's prefered if you just specify the names of resources (as parts are controled by the partlist).
+#[File]
+#Example: MechJeb2.dll
+
+!partslist
+
+#This is a list of parts to allow users to put on their ships.
+#If a part the client has doesn't appear on this list, they can still join the server but not use the part.
+#The default stock parts have been added already for you.
+#To add a mod part, add the name from the part's .cfg file. The name is the name from the PART{} section, where underscores are replaced with periods.
+#[partname]
+#Example: mumech.MJ2.Pod (NOTE: In the part.cfg this MechJeb2 pod is named mumech_MJ2_Pod. The _ have been replaced with .)
+#You can use this application to generate partlists from a KSP installation if you want to add mod parts: http://forum.kerbalspaceprogram.com/threads/57284
+
+StandardCtrlSrf
+CanardController
+noseCone
+AdvancedCanard
+airplaneTail
+deltaWing
+noseConeAdapter
+rocketNoseCone
+smallCtrlSrf
+standardNoseCone
+sweptWing
+tailfin
+wingConnector
+winglet
+R8winglet
+winglet3
+Mark1Cockpit
+Mark2Cockpit
+Mark1-2Pod
+advSasModule
+asasmodule1-2
+avionicsNoseCone
+crewCabin
+cupola
+landerCabinSmall
+mark3Cockpit
+mk1pod
+mk2LanderCabin
+probeCoreCube
+probeCoreHex
+probeCoreOcto
+probeCoreOcto2
+probeCoreSphere
+probeStackLarge
+probeStackSmall
+sasModule
+seatExternalCmd
+rtg
+batteryBank
+batteryBankLarge
+batteryBankMini
+batteryPack
+ksp.r.largeBatteryPack
+largeSolarPanel
+solarPanels1
+solarPanels2
+solarPanels3
+solarPanels4
+solarPanels5
+JetEngine
+engineLargeSkipper
+ionEngine
+liquidEngine
+liquidEngine1-2
+liquidEngine2
+liquidEngine2-2
+liquidEngine3
+liquidEngineMini
+microEngine
+nuclearEngine
+radialEngineMini
+radialLiquidEngine1-2
+sepMotor1
+smallRadialEngine
+solidBooster
+solidBooster1-1
+toroidalAerospike
+turboFanEngine
+MK1Fuselage
+Mk1FuselageStructural
+RCSFuelTank
+RCSTank1-2
+rcsTankMini
+rcsTankRadialLong
+fuelTank
+fuelTank1-2
+fuelTank2-2
+fuelTank3-2
+fuelTank4-2
+fuelTankSmall
+fuelTankSmallFlat
+fuelTank.long
+miniFuelTank
+mk2Fuselage
+mk2SpacePlaneAdapter
+mk3Fuselage
+mk3spacePlaneAdapter
+radialRCSTank
+toroidalFuelTank
+xenonTank
+xenonTankRadial
+adapterLargeSmallBi
+adapterLargeSmallQuad
+adapterLargeSmallTri
+adapterSmallMiniShort
+adapterSmallMiniTall
+nacelleBody
+radialEngineBody
+smallHardpoint
+stationHub
+structuralIBeam1
+structuralIBeam2
+structuralIBeam3
+structuralMiniNode
+structuralPanel1
+structuralPanel2
+structuralPylon
+structuralWing
+strutConnector
+strutCube
+strutOcto
+trussAdapter
+trussPiece1x
+trussPiece3x
+CircularIntake
+landingLeg1
+landingLeg1-2
+RCSBlock
+stackDecoupler
+airScoop
+commDish
+decoupler1-2
+dockingPort1
+dockingPort2
+dockingPort3
+dockingPortLarge
+dockingPortLateral
+fuelLine
+ladder1
+largeAdapter
+largeAdapter2
+launchClamp1
+linearRcs
+longAntenna
+miniLandingLeg
+parachuteDrogue
+parachuteLarge
+parachuteRadial
+parachuteSingle
+radialDecoupler
+radialDecoupler1-2
+radialDecoupler2
+ramAirIntake
+roverBody
+sensorAccelerometer
+sensorBarometer
+sensorGravimeter
+sensorThermometer
+spotLight1
+spotLight2
+stackBiCoupler
+stackDecouplerMini
+stackPoint1
+stackQuadCoupler
+stackSeparator
+stackSeparatorBig
+stackSeparatorMini
+stackTriCoupler
+telescopicLadder
+telescopicLadderBay
+SmallGearBay
+roverWheel1
+roverWheel2
+roverWheel3
+wheelMed
+flag
+kerbalEVA
+mediumDishAntenna
+GooExperiment
+science.module
+RAPIER
+Large.Crewed.Lab
+
+# KAS
+KAS.Container1
+KAS.Container2
+KAS.ContainerBay1
+KAS.CPort1
+KAS.CPort2
+KAS.HookSupport
+KAS.Hook.Anchor
+KAS.Hook.GrapplingHook
+KAS.Hook.Magnet
+KAS.Pipe1
+KAS.Pylon1
+KAS.Strut1
+KAS.Winch1
+KAS.Winch2
+KAS.Winch3
+KAS.Winch4
